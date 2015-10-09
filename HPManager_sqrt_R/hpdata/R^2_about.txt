@@ -1,0 +1,8 @@
+nature:parent
+parent:none
+number:1
+fileName:about
+title:ABOUT US
+body:
+HPManager for R^2（processingで作ったhtml管理プログラム）の試用運転中です。
+バグがないと嬉しいです。
