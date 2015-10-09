@@ -94,6 +94,7 @@ class Manager {
       backNext(file);
       file.addHtml(model5);
     }
+    file.saveHtml();
   }
 
   File parentFile(File file) {
