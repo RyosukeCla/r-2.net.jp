@@ -6,3 +6,18 @@ title:ABOUT US
 body:
 HPManager for R^2（processingで作ったhtml管理プログラム）の試用運転中です。
 バグがないと嬉しいです。
+<pre>
+#include <stdio.h>
+
+void test(int n);
+
+int main() {
+  test(100);
+  return 0;
+}
+void test(int n) {
+  for (int i = 0; i < ; i++) {
+    printf("This is Test");
+  }
+}
+</pre>
