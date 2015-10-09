@@ -1,11 +1,19 @@
 @font-face {
 	font-family: 'font-en';
+<<<<<<< HEAD
 	src: url(https://ryosukecla.github.io./r-2.net.jp/fonts/labtop_secundo/LABTSECS.ttf);
+=======
+	src: url(http://ryosukecla.github.io/r-2.net.jp/fonts/labtop_secundo/LABTSECS.ttf);
+>>>>>>> gh-pages
 }
 
 @font-face {
 	font-family: 'font-ja';
+<<<<<<< HEAD
 	src: url(https://ryosukecla.github.io./r-2.net.jp/fonts/kokoro/Kokoro.otf);
+=======
+	src: url(http://ryosukecla.github.io/r-2.net.jp/fonts/kokoro/Kokoro.otf);
+>>>>>>> gh-pages
 }
 
 html, body {
@@ -45,12 +53,20 @@ pre {
 	left: 0;
 	z-index: 10000;
 	display: block;
+<<<<<<< HEAD
 	background: url(https://ryosukecla.github.io./r-2.net.jp/pics/main-logo1.png);
+=======
+	background: url(http://ryosukecla.github.io/r-2.net.jp/pics/main-logo1.png);
+>>>>>>> gh-pages
 	transition: .4s;
 }
 
 #main-logo a:hover {
+<<<<<<< HEAD
 	background: url(https://ryosukecla.github.io./r-2.net.jp/pics/main-logo0.png);
+=======
+	background: url(http://ryosukecla.github.io/r-2.net.jp/pics/main-logo0.png);
+>>>>>>> gh-pages
 }
 
 #mainPageCanvas {
