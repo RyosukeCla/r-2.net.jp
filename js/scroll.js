@@ -35,7 +35,7 @@ function graph() {
     */
 
     for (var i = getScrollBottom() - 70; i < getScrollBottom(); i+=10) {
-		y = float(i * height / getBottom();
+		y = float(i * height / getBottom());
 		x = float(+ width/2.0 + width/6.0 * sin(radians(t*2.0 + i*2.0)));
 	    rect(0,y,x,10 * height / getBottom());
     }
