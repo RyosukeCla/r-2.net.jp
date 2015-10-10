@@ -89,7 +89,7 @@ class Manager {
       file.addHtml("<h1 class=\"head-title\">"+file.getTitle()+"</h1>");
       file.addHtml(file.body);
       file.addHtml(model3);
-      sideMenu(file);
+      file.addHtml(sideMenu(file));
       file.addHtml(model4);
       backNext(file);
       file.addHtml(model5);
@@ -208,7 +208,7 @@ class Manager {
       for (int i = 0; i < f.size (); i++) {
         if (file.getParent().equals(f.get(i).getFileName())) {
           sm[0] = "<li class=\"unforcused parent\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
-        } else {
+        } else if (file.getParent().equals("none")) {
           sm[0] ="";
         }
         if (file.getFileName().equals(f.get(i).getFileName())) {
