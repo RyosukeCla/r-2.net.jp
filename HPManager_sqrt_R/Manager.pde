@@ -201,7 +201,7 @@ class Manager {
           n++;
         }
       }
-      String[] sm = new String[n+1];
+      String[] sm = new String[n+2];
       for (int i = 0; i < sm.length; i++) {
         sm[i] = "";
       }
@@ -215,7 +215,7 @@ class Manager {
           sm[1] = "<li class=\"forcused self\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
         } 
         if (file.getFileName().equals(f.get(i).getParent())) {
-          sm[f.get(i).getNumber()+1] = "<li class=\"unforcused child\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
+          sm[f.get(i).getNumber()+2] = "<li class=\"unforcused child\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
         }
       }
       return sm;
