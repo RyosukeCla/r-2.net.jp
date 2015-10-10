@@ -25,7 +25,7 @@ class Manager {
     println("now creating html");
     for (int i = 0; i < f.size (); i++) {
       toHtml(f.get(i));
-      println("  created " + f.get(i).getTitle() + ".html");
+      println("  created " + f.get(i).getFileName() + ".html");
     }
     println("completed!");
   }
