@@ -2,7 +2,7 @@ nature:parent
 parent:none
 number:2
 fileName:test
-title:test
+title:TEST
 body:
 <pre>
 これはtestです！
