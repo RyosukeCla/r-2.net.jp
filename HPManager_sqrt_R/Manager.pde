@@ -100,6 +100,7 @@ class Manager {
   File parentFile(File file) {
     for (int i = 0; i < f.size(); i++) {
       if (file.getParent().equals(f.get(i).getFileName())) {
+        //println(f.get(i).getFileName());
         return f.get(i);
       }
     }
@@ -108,13 +109,15 @@ class Manager {
 
   File ancestorFile(File file) {
     File fam = file;
-    for (int i = 0; i < f.size (); i++) {
+    for (int i = f.size() - 1; i > 0; i--) {
       if (fam.getParent().equals(f.get(i).getFileName())) {
-        if (fam.getFileName().equals(f.get(i).getFileName())==false) {
-          fam = f.get(i);
-        }
+        //if (fam.getFileName().equals(f.get(i).getFileName())==false) {
+        fam = f.get(i);
+        //println(f.get(i).getFileName());
+        //}
       }
     }
+    //println(fam.getFileName());
     return fam;
   }
 
@@ -155,7 +158,10 @@ class Manager {
         } else {
           sm[f.get(i).getNumber()] = "<li class=\"unforcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + ".html\">" + f.get(i).getTitle() + "</a></li>";
         }
-      } else {
+      }
+    }
+    for (int i = 0; i < f.size(); i++) {
+      if (!file.getParent().equals("none")) {
         if (ancestorFile(file).getFileName().equals(f.get(i).getFileName())) {
           sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + ".html\">" + f.get(i).getTitle() + "</a></li>";
         }
