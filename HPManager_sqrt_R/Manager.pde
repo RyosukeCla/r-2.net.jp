@@ -151,13 +151,13 @@ class Manager {
     for (int i = 0; i < f.size(); i++) {
       if (f.get(i).getParent().equals("none")) {
         if (file.getFileName().equals(f.get(i).getFileName())) {
-          sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
+          sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
         } else {
-          sm[f.get(i).getNumber()] = "<li class=\"unforcused\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
+          sm[f.get(i).getNumber()] = "<li class=\"unforcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
         }
       } else {
         if (ancestorFile(file).getFileName().equals(f.get(i).getFileName())) {
-          sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
+          sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
         }
       }
     }
@@ -178,13 +178,13 @@ class Manager {
       String[] sm = new String[n];
       for (int i = 0; i < f.size (); i++) {
         if (file.getParent().equals(f.get(i).getFileName())) {
-          sm[0] = "<li class=\"unforcused parent\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(file)+".html\">"+f.get(i).getTitle()+"</a><li>";
+          sm[0] = "<li class=\"unforcused parent\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(file)+".html\">"+f.get(i).getTitle()+"</a><li>";
         }
         if (file.getParent().equals(f.get(i).getParent())) {
           if (file.getFileName().equals(f.get(i).getFileName())) {
-            sm[f.get(i).getNumber()+1] = "<li class=\"forcused self\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
+            sm[f.get(i).getNumber()+1] = "<li class=\"forcused self\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
           } else {
-            sm[f.get(i).getNumber()+1] = "<li class=\"unforcused child\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
+            sm[f.get(i).getNumber()+1] = "<li class=\"unforcused child\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
           }
         }
       }
@@ -207,15 +207,15 @@ class Manager {
       }
       for (int i = 0; i < f.size (); i++) {
         if (file.getParent().equals(f.get(i).getFileName())) {
-          sm[0] = "<li class=\"unforcused parent\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
+          sm[0] = "<li class=\"unforcused parent\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
         } else {
           sm[0] ="";
         }
         if (file.getFileName().equals(f.get(i).getFileName())) {
-          sm[1] = "<li class=\"forcused self\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
+          sm[1] = "<li class=\"forcused self\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
         } 
         if (file.getFileName().equals(f.get(i).getParent())) {
-          sm[f.get(i).getNumber()+1] = "<li class=\"unforcused child\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
+          sm[f.get(i).getNumber()+1] = "<li class=\"unforcused child\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
         }
       }
       return sm;
@@ -230,10 +230,10 @@ class Manager {
     for (int i = 0; i < f.size(); i++) {
       if (file.getParent().equals(f.get(i).getParent())) {
         if (file.getNumber() - 1 == f.get(i).getNumber()) {
-          sm[0] = "<li><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+"back:"+f.get(i).getTitle()+"</a></li>";
+          sm[0] = "<li><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+"back:"+f.get(i).getTitle()+"</a></li>";
         }
         if (file.getNumber() + 1 == f.get(i).getNumber()) {
-          sm[1] = "<li><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+"next"+f.get(i).getTitle()+"</a></li>";
+          sm[1] = "<li><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+"next"+f.get(i).getTitle()+"</a></li>";
         }
       }
     }
