@@ -158,8 +158,6 @@ class Manager {
       } else {
         if (ancestorFile(file).getFileName().equals(f.get(i).getFileName())) {
           sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
-        } else {
-          sm[f.get(i).getNumber()] = "<li class=\"unforcused\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
         }
       }
     }
@@ -184,16 +182,16 @@ class Manager {
         }
         if (file.getParent().equals(f.get(i).getParent())) {
           if (file.getFileName().equals(f.get(i).getFileName())) {
-            sm[f.get(i).getNumber()+1] = "<li class=\"forcused self\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(file)+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
+            sm[f.get(i).getNumber()+1] = "<li class=\"forcused self\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
           } else {
-            sm[f.get(i).getNumber()+1] = "<li class=\"unforcused child\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(file)+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
+            sm[f.get(i).getNumber()+1] = "<li class=\"unforcused child\"><a href=\"http://ryosukecla.github.io./r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a></li>";
           }
         }
       }
       return sm;
     } else {
       for (int i = 0; i < f.size (); i++) {
-        if (file.getTitle().equals(f.get(i).getParent())) {
+        if (file.getFileName().equals(f.get(i).getParent())) {
           n++;
         }
         if (file.getParent().equals(f.get(i).getFileName())) {
