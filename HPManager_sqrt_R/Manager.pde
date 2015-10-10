@@ -178,7 +178,7 @@ class Manager {
       String[] sm = new String[n];
       for (int i = 0; i < f.size (); i++) {
         if (file.getParent().equals(f.get(i).getFileName())) {
-          sm[0] = "<li class=\"unforcused parent\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(file)+".html\">"+f.get(i).getTitle()+"</a><li>";
+          sm[0] = "<li class=\"unforcused parent\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+f.get(i).getTitle()+"</a><li>";
         }
         if (file.getParent().equals(f.get(i).getParent())) {
           if (file.getFileName().equals(f.get(i).getFileName())) {
