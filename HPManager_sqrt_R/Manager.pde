@@ -151,13 +151,13 @@ class Manager {
     for (int i = 0; i < f.size(); i++) {
       if (f.get(i).getParent().equals("none")) {
         if (file.getFileName().equals(f.get(i).getFileName())) {
-          sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
+          sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + ".html\">" + f.get(i).getTitle() + "</a></li>";
         } else {
-          sm[f.get(i).getNumber()] = "<li class=\"unforcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
+          sm[f.get(i).getNumber()] = "<li class=\"unforcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + ".html\">" + f.get(i).getTitle() + "</a></li>";
         }
       } else {
         if (ancestorFile(file).getFileName().equals(f.get(i).getFileName())) {
-          sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + "\".html>" + f.get(i).getTitle() + "</a></li>";
+          sm[f.get(i).getNumber()] = "<li class=\"forcused\"><a href=\"http://ryosukecla.github.io/r-2.net.jp/" + f.get(i).getFileName() + ".html\">" + f.get(i).getTitle() + "</a></li>";
         }
       }
     }
