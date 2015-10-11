@@ -12,7 +12,7 @@ function draw() {
 	graph();
 	fill(200,200,160,100);
 	text(getScrollBottom(),width/2.0,30);
-	text(getBottom(),width/2.0,50);
+	text(getBottom() + 1,width/2.0,50);
 }
 
 function windowResized() {
@@ -25,7 +25,7 @@ function graph() {
 	if (t > 360) t = 0;
 	var x, y;
 	stroke(28);
-	fill(200,200,180,30);
+	fill(200,200,180,20);
 	/*
 	for (var i = getScrollBottom() - 80; i < getScrollBottom(); i+=10) {
 		y = float(i * height / getBottom());
@@ -33,11 +33,10 @@ function graph() {
 	    rect(0,y,x,10 * height / getBottom());
     }
     */
-
-    for (var i = getScrollBottom() - 70; i < getScrollBottom(); i+=10) {
-		y = float(i * height / getBottom());
-		x = float(+ width/2.0 + width/6.0 * sin(radians(t*2.0 + i*2.0)));
-	    rect(0,y,x,10 * height / getBottom());
+    y = float(getScrollBottom() * height / getBottom());
+    for (var i = 0; i < 7; i+=1) {
+		x = float(+ width/2.0 + width/6.0 * sin(radians(t*2.0 + i*70.0*getScrollBottom()/getBottom())));
+	    rect(0,y - i * height / 30.0 - height / 60.0,x, - height / 30.0);
     }
 }
 
