@@ -238,10 +238,10 @@ class Manager {
     for (int i = 0; i < f.size(); i++) {
       if (file.getParent().equals(f.get(i).getParent())) {
         if (file.getNumber() - 1 == f.get(i).getNumber()) {
-          sm[0] = "<li><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+"back:"+f.get(i).getTitle()+"</a></li>";
+          sm[0] = "<li><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+"back: "+f.get(i).getTitle()+"</a></li>";
         }
         if (file.getNumber() + 1 == f.get(i).getNumber()) {
-          sm[1] = "<li><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+"next"+f.get(i).getTitle()+"</a></li>";
+          sm[1] = "<li><a href=\"http://ryosukecla.github.io/r-2.net.jp/"+familyTree(f.get(i))+f.get(i).getFileName()+".html\">"+"next: "+f.get(i).getTitle()+"</a></li>";
         }
       }
     }
