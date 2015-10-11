@@ -91,7 +91,9 @@ class Manager {
       file.addHtml(model3);
       file.addHtml(sideMenu(file));
       file.addHtml(model4);
-      backNext(file);
+      if (file.getNature().equals("child")) {
+        file.addHtml(backNext(file));
+      }
       file.addHtml(model5);
     }
     file.saveHtml();
