@@ -149,6 +149,10 @@ pre {
 	margin-right: 1%;
 }
 
+#main-contents a {
+	color:  rgb(240, 210, 200);
+}
+
 #side-menu-wrap-wrap {
 	font-family: font-en;
 	width: 14%;
