@@ -154,7 +154,7 @@ pre {
 }
 
 #main-contents h2 {
-	display: block;
+	width: 40%;
 	border-bottom: thin solid rgba(230,230,230,.5);
 }
 
