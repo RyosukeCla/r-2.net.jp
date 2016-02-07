@@ -1,8 +1,6 @@
 R^2_index.txt
 R^2_about.txt
-R^2_test.txt
-R^2_test_test0.txt
-R^2_test_test1.txt
-R^2_test_test2.txt
-R^2_test_test1_test1_0.txt
-R^2_test_test1_test1_1.txt
+R^2_programming.txt
+R^2_programming_refactoring.txt
+R^2_programming_refactoring_catalog1.txt
+R^2_programming_refactoring_catalog2.txt

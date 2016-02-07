@@ -1,0 +1,12 @@
+nature:parent
+parent:none
+number:2
+fileName:programming
+title:PROGRAMMING
+body:
+<pre>
+プログラミングに関してのことを書いていくかもしれません。
+たぶん。。。
+暇があって、気が向いたらやるかも？
+あおいｓｊふぉあｓｊｄｆ
+</pre>

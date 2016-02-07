@@ -31,6 +31,10 @@ class Manager {
   }
 
   Manager(String fileName) {
+    makeTextFile (fileName);
+  }
+  
+  void makeTextFile (String fileName) {
     PrintWriter c = createWriter("hpdata/"+fileName+".txt");
     c.println("nature:");
     c.println("parent:");

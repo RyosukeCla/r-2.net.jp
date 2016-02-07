@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link rel="shortcut icon" href="http://ryosukecla.github.io/r-2.net.jp/pics/logo120.png">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://ryosukecla.github.io/r-2.net.jp/css/style.css" />
+  <script src="http://ryosukecla.github.io/r-2.net.jp/libraries/p5.js" type="text/javascript"></script>
+  <script src="http://ryosukecla.github.io/r-2.net.jp/js/scroll.js" type="text/javascript"></script>
+  <script src="http://ryosukecla.github.io/r-2.net.jp/libraries/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="http://ryosukecla.github.io/r-2.net.jp/libraries/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+  <meta charset="UTF-8" />
+<title>R^2 - 不吉な匂い</title>
+</head>
+
+<body>
+
+  <div id="main-logo">
+    <a href="index.html"></a>
+  </div>
+
+  
+  <div id="bgCanvas">
+  </div>
+
+  <div id="notHome">
+  </div>
+  
+  <nav id="menu-wrap">
+    <ul id="menu">
+<li class="unforcused"><a href="http://ryosukecla.github.io/r-2.net.jp/index.html">HOME</a></li>
+<li class="unforcused"><a href="http://ryosukecla.github.io/r-2.net.jp/about.html">ABOUT US</a></li>
+<li class="forcused"><a href="http://ryosukecla.github.io/r-2.net.jp/programming.html">PROGRAMMING</a></li>
+    </ul>
+  </nav>
+  
+  <div id="body-wrap">
+    <div id="main-contents">
+<h1 class="head-title">不吉な匂い</h1>
+<p>
+リファクタリングの本に「不吉な匂い」っていう表現があったので、これを使います。
+<a href = "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E8%87%AD%E3%81%84">（ここみて）</a>いろいろな匂いがありまして、その匂いっていうのは、プログラムの危ない問題から発生しています。その匂いを察知できるように、抽象化された匂いをいくつか紹介しておきます。<br>
+<h1> 重複したコード </h1><br>
+　まあその名の通り、重複している部分です。自分なんかよくでてきますね。<br>
+<h1> 長すぎるメソッド </h1><br>
+  とにかく、中身でやってることが多い輩です。クールでなくて、めんどくさい輩です。とりあえず、読みたくなくなりますよね。まあ、自分なんかはめんどくさくて、長くなってしまいますが。。。<br>
+<h1> でっかいクラス </h1><br>
+  でっかいクラスです。クラスのフィールドやメソッドがめちゃくちゃいっぱいあって、そのクラスだけで全部やってんじゃないかッて感じです。なんでもかんでも一人でやりたがる、リーダー（）的な存在ですね。それで、結局、失敗するんです。まあ、自分なんかはでっかいクラスつくっちゃいますけど(なんせ、知識と経験が乏しいから...)<br>
+<br>
+他にもいろいろありますが、リファクタリングを学んでいけば、勝手に身につくと信じてます。
+</p>
+</div>
+    <div id="side-menu-wrap-wrap">
+      <nav id="side-menu-wrap">
+        <ul id="side-menu">
+<li class="unforcused parent"><a href="http://ryosukecla.github.io/r-2.net.jp/programming/refactoring.html">Refactoring</a><li>
+<li class="forcused self"><a href="http://ryosukecla.github.io/r-2.net.jp/programming/refactoring/catalog1.html">不吉な匂い</a></li>
+<li class="unforcused child"><a href="http://ryosukecla.github.io/r-2.net.jp/programming/refactoring/catalog2.html">マジックナンバーの置き換え</a></li>
+</ul>
+      </nav>
+    </div>
+  </div>
+  <div id="clear">
+
+<li><a href="http://ryosukecla.github.io/r-2.net.jp/programming/refactoring/catalog2.html">next: マジックナンバーの置き換え</a></li>
+</div>
+  
+  <div id="footer-wrap">
+    <div id="footer">
+      ©R^2, Ryosuke Suzuki, Ryu Fujiwara
+
+    </div>
+  </div>
+  
+</body>
+
+</html>

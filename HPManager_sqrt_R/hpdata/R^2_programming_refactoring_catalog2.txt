@@ -1,0 +1,137 @@
+nature:child
+parent:refactoring
+number:1
+fileName:catalog2
+title:マジックナンバーの置き換え
+body:
+<p>
+マジックナンバーの置き換えです。置き換えちゃいます。<br>
+マジックナンバーっていうのは、プログラム書いた本人にしかわからない数字です。暗号みたいなもんです。まあ、公開キー渡されても解読しようとは思いませんが、とりあえず他の人からみたら何を表しているのか不明なやつです。
+<br>
+</p>
+<pre>
+例
+
+3.14
+
+1.41
+
+123.12456789
+
+3
+
+2
+
+</pre>
+<p>
+ほらこれ、マジックナンバーってやつです。3.14とか、1.41とかはまああれでしょって感じですね。
+123.12456789なんてなんだこれって感じです(なんで3が抜けてるの？みたいな。。。)。<br>
+それにちゃんと名前をつけてあげましょう。
+</p>
+<pre>
+3.14 -> PI
+
+1.41 -> SQRT_2
+
+123.12456789 -> EXAMPLE_KEY
+
+3 -> SOFT
+
+2 -> HARD
+
+</pre>
+<p>
+こんな感じです。これでだいぶ見やすくなった気がしませんか。ではつぎのプログラムをみてみましょう。次のプログラムは消費税付きで値段をアウトプットしてくれるプログラムです<br>
+</p>
+
+<pre>
+[CalculateWithTax.java]
+
+public class CalculateWithTax {
+
+  	public static void main (String[] args) {
+    		System.out.println (CalculateWithTax.temp(100));
+  	}
+
+  	public static int temp(int t) {
+    		return (int) (t * 1.08);
+  	}
+}
+
+[output]
+>108
+</pre>
+<p>
+はい。これ不吉な匂いがぷんぷんしますね。どのあたりに不吉な匂いが漂っているか考えてみてください。1.08です。これまさにマジックナンバーです。なのでここを修正しましょう。リファクタリングします。リファクタリングは、テストを行います。まずは、変更前に一度、動作の確認をします。動作の確認については[output]で確認できました。1.08をtaxっていう変数で置くのはどうでしょうか。そしてtaxの値をコンストラクタで初期化してあげます。とりあえずtaxはprivateにしておきます。
+</p>
+<pre>
+[CalculateWithTax.java]
+
+public class CalculateWithTax {
+  	private double tax;
+
+  	public CalculateWithTax (double tax) {
+    		this.tax = tax;
+  	}
+
+  		public static void main (String[] args) {
+    		CalculateWithTax c = new CalculateWithTax(1.08);
+    		System.out.println (c.temp(100));
+  	}
+
+  	public int temp(int t) {
+    		return (int) (t * tax);
+  	}
+}
+
+[output]
+>108
+
+</pre>
+<p>
+はい。リファクタリングを行った後に、テストした結果。[output]は変わりませんでした。これでリファクタリングの一つのステップが終わりました。これで、だいぶ、すっきりしましたね！！（）
+</p>
+<p>
+他にも、不吉な匂いを感じます。temp(int t)のtempとtです。このtempとtはまったく何を表しているのかがわかりません。そこで何を表しているのかわかりやすい名前をつけてあげるべきです。tempをcalcWithTax、tをcostとするのはどうでしょうか。前より確実に理解が容易です。最後にtaxにsetterとgetterをつけてあげれば、税率を変えて税込価格を計算したりすることができますね。これで2016年度も乗り切れるプログラムになりそうですね。以下、これらを変えたプログラムを載せておきます。
+</p>
+
+<pre>
+[CalculateWithTax.java]
+
+public class CalculateWithTax {
+	private double tax;
+
+	public CalculateWithTax (double tax) {
+  		this.tax = tax;
+	}
+
+  	public setTax (double tax) {
+    		this.tax = tax;
+  	}
+  
+  	public getTax () {
+    	return tax;
+  	}
+
+  	public static void main (String[] args) {
+    		CalculateWithTax c = new CalculateWithTax(1.08);
+    		System.out.println (c.calcWithTax(100));
+   		c.setTax (1.10);
+    		System.out.println (c.calcWithTax(100));
+  	}	
+
+  	public int calcWithTax(int cost) {
+    		return (int) (cost * tax);
+  	}
+}
+
+[output]
+>108
+>110
+
+</pre>
+
+
+
+
+
