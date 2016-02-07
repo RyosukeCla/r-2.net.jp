@@ -154,8 +154,7 @@ pre {
 }
 
 #main-contents h2 {
-	width: 40%;
-	border-bottom: thin solid rgba(230,230,230,.5);
+	border-bottom: thin solid rgba(140,110,100,.5);
 }
 
 #side-menu-wrap-wrap {
