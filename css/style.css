@@ -154,6 +154,7 @@ pre {
 }
 
 #main-contents h2 {
+	padding-top: 20px;
 	border-bottom: thin solid rgba(140,135,130,.5);
 }
 
