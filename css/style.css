@@ -153,6 +153,11 @@ pre {
 	color:  rgb(240, 210, 200);
 }
 
+#main-contents h2 {
+	display: block;
+	border-bottom: thin solid rgba(230,230,230,.5);
+}
+
 #side-menu-wrap-wrap {
 	font-family: font-en;
 	width: 14%;
